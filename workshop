@@ -1,0 +1,71 @@
+{
+    "type": "execute_events",
+    "data": {
+        "events": [
+            {
+                "type": "register_bricks",
+                "data": {
+                    "bricks": [
+                        {
+                            "id": "container_id",
+                            "ui_type": "container",
+                            "bricks": [
+                                {
+                                    "id": "the_header",
+                                    "ui_type": "header",
+                                    "data": {
+                                        "standard_header": {
+                                            "title": "Flox Example",
+                                            "navigation": {
+                                                "behavior": "back"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "list",
+                                    "ui_type": "list",
+                                    "data": {
+                                        "separator": {
+                                            "disabled": true
+                                        }
+                                    },
+                                    "bricks": [
+                                        {
+                                            "id": "text1",
+                                            "ui_type": "button",
+                                            "data": {
+                                                "button_text": "Show Alert",
+                                                "flox_event": {
+                                                    "type": "alert",
+                                                    "data": {
+                                                        "text": "This is an alert message"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "id": "text2",
+                                            "ui_type": "cell",
+                                            "data": {
+                                                "title": "text 2",
+                                                "subtitle": "text 2"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "render",
+                "data": {
+                    "mode": "push",
+                    "brick_id": "container_id"
+                }
+            }
+        ]
+    }
+}
